@@ -39,8 +39,6 @@ const Login = () => {
     dispatch(clearMessage())
   }, [dispatch])
 
-  console.log("the user", currentUser)
-
   const doLogin = (values: { email: string; password: string }) => {
     dispatch(login(values))
       .unwrap()

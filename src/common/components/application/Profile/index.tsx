@@ -33,8 +33,6 @@ const Profile: FC<Props> = ({ setRoute, setting, setSetting }) => {
   )
   const udata = currentUser?.data?.user
 
-  console.log("checkout", udata)
-
   const [content, setContent] = useState({})
   useEffect(() => {
     userService.getOrganization(`${udata?.id}`).then(
@@ -50,8 +48,6 @@ const Profile: FC<Props> = ({ setRoute, setting, setSetting }) => {
       }
     )
   }, [])
-
-  console.log(content)
 
   const [successful, setSuccessful] = useState(false)
   const dispatch = useAppDispatch()

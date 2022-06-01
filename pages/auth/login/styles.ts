@@ -1,10 +1,7 @@
 import styled from "styled-components"
-// import { colors } from "@components/application/Theme"
-// import resp from "@utils/resp"
 
 export const Container = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   height: 100vh;
   background-image: url("https://res.cloudinary.com/odd-developer/image/upload/v1653947302/bg_olaifj.png");

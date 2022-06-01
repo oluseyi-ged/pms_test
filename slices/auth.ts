@@ -25,7 +25,6 @@ export const register = createAsyncThunk(
     thunkAPI.dispatch(setLoader(true))
     try {
       const response: any = await AuthService.register(userData)
-      console.log(response?.data?.message)
 
       thunkAPI.dispatch(setLoader(false))
       thunkAPI.dispatch(setMessage(response?.message))
@@ -33,10 +32,7 @@ export const register = createAsyncThunk(
     } catch (error: any) {
       const message =
         error.response.errors.email || error.response.errors.phoneNumber
-      console.log(
-        "error",
-        error.response.data.errors.password || error.response.data.errors.email
-      )
+
       thunkAPI.dispatch(setLoader(false))
       thunkAPI.dispatch(setMessage(message))
       return thunkAPI.rejectWithValue(message)
@@ -59,7 +55,7 @@ export const login = createAsyncThunk(
         error?.toString()
       thunkAPI.dispatch(setMessage(message))
       thunkAPI.dispatch(setLoader(false))
-      console.log(error)
+
       return thunkAPI.rejectWithValue(message)
     }
   }

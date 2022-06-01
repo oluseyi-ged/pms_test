@@ -12,16 +12,9 @@ export const isBrowser = (): boolean => {
 
 export const nextLocalStorage = (): Storage | void => {
   if (isBrowser()) {
-    console.log("onClick")
     return window.localStorage
-  } else {
-    console.log("rubbish")
   }
 }
-
-// const user: any = JSON.parse(nextLocalStorage()?.getItem("user")!)
-
-// console.log("unnno", user.id)
 
 let header: any = authHeader()
 

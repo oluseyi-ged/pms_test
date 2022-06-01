@@ -14,8 +14,6 @@ const Home: NextPage = () => {
     (store: RootState) => store.auth
   )
 
-  // console.log("checkout", currentUser)
-
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(currentUser?.data?.user))
     localStorage.setItem("token", currentUser?.data?.token)

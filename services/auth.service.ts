@@ -5,7 +5,6 @@ const BaseUrl =
     ? "https://pms-shr93.ondigitalocean.app/api/"
     : "https://pms-shr93.ondigitalocean.app/api/"
 
-console.log("BaseUrl", process.env.NODE_ENV, BaseUrl)
 const register = (data: any) => {
   return axios.post(BaseUrl + "register", data)
 }

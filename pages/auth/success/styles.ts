@@ -1,6 +1,4 @@
 import styled from "styled-components"
-// import { colors } from "@components/application/Theme"
-// import resp from "@utils/resp"
 
 export const Container = styled.div`
   display: flex;
