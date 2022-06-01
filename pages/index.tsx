@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Navbar from "@components/application/Navbar"
 import Dashboard from "@modules/dashboard/Home"
 import Setting from "@modules/dashboard/Setting"
 import type { NextPage } from "next"
@@ -74,6 +75,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="pages">
+        <Navbar />
         {route === "dashboard" ? (
           <Dashboard setRoute={setRoute} />
         ) : (

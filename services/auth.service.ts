@@ -18,9 +18,8 @@ const login = async (data: any) => {
   return response.data
 }
 
-const logout = async (data: any) => {
-  const response = await axios.post(BaseUrl + "logout", data)
-  localStorage.removeItem("user")
+const logout = () => {
+  localStorage.clear()
 }
 
 const authService = {

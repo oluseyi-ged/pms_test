@@ -65,12 +65,9 @@ export const login = createAsyncThunk(
   }
 )
 
-export const logout = createAsyncThunk(
-  "auth/logout",
-  async (data: any, thunkAPI) => {
-    await AuthService.logout(data)
-  }
-)
+export const logout = createAsyncThunk("auth/logout", async () => {
+  await AuthService.logout()
+})
 
 const initialState = user
   ? { isLoggedIn: true, user }
